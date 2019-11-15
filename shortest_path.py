@@ -29,7 +29,7 @@ def mouseCallback(event, x, y, flags, param):
             end = y, x
             shortestPath = bfs(img, start, end)
             for y,x in shortestPath:
-                imgCL[y][x] = [50,205,50]
+                cv2.circle(imgCL,(x,y),1,(50,205,50),-1)
 
 def backtrace(parents, start, end):
     path = [end]
